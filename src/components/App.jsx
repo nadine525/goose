@@ -1,16 +1,16 @@
+import Header from "./Header";
+import ThemeToggle from "./ThemeToggle";
+
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
+    <>
+      <Header />
+      <ThemeToggle />
+
+      <p>Hello!</p>
+  </>
+
+
+    
   );
 };
