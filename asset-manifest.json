@@ -1,13 +1,19 @@
 {
   "files": {
-    "main.css": "/goose/static/css/main.7acaea2f.css",
-    "main.js": "/goose/static/js/main.07d3183d.js",
+    "main.css": "/goose/static/css/main.5be1bcb4.css",
+    "main.js": "/goose/static/js/main.18a31caf.js",
+    "static/media/CoolveticaRg-Italic.woff2": "/goose/static/media/CoolveticaRg-Italic.354b20eb1b8d25af62a1.woff2",
+    "static/media/CoolveticaRg-Regular.woff2": "/goose/static/media/CoolveticaRg-Regular.3829e81cd606bef6e1e9.woff2",
+    "static/media/inter-v12-latin-700.woff2": "/goose/static/media/inter-v12-latin-700.54321e26b8bf4739a16d.woff2",
+    "static/media/inter-v12-latin-600.woff2": "/goose/static/media/inter-v12-latin-600.8f1e0300e8d26fa8919d.woff2",
+    "static/media/inter-v12-latin-500.woff2": "/goose/static/media/inter-v12-latin-500.c72c72b70c82b1f4bacf.woff2",
+    "static/media/inter-v12-latin-regular.woff2": "/goose/static/media/inter-v12-latin-regular.be7cb18dc7caf47cf7e9.woff2",
     "index.html": "/goose/index.html",
-    "main.7acaea2f.css.map": "/goose/static/css/main.7acaea2f.css.map",
-    "main.07d3183d.js.map": "/goose/static/js/main.07d3183d.js.map"
+    "main.5be1bcb4.css.map": "/goose/static/css/main.5be1bcb4.css.map",
+    "main.18a31caf.js.map": "/goose/static/js/main.18a31caf.js.map"
   },
   "entrypoints": [
-    "static/css/main.7acaea2f.css",
-    "static/js/main.07d3183d.js"
+    "static/css/main.5be1bcb4.css",
+    "static/js/main.18a31caf.js"
   ]
 }
