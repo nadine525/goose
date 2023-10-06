@@ -1,4 +1,5 @@
 import React from 'react';
+// import { useTheme } from 'styled-components'
 import { useRef, useEffect, useState } from 'react';
 import {Division} from "./VerticalBar.styled";
 import {  
@@ -45,7 +46,7 @@ export const getChartOptions = (props) => ({
                     weight: 400,
                     lineHeight: 1.5,
                 },
-                color: props.theme.colors.primaryText,
+                color: 'props.theme.colors.thirdText',
             }
         },
         y: {
@@ -87,7 +88,7 @@ export const getChartOptions = (props) => ({
     title: {
         display: true,
         text: 'Tasks',
-        color: props.theme.colors.primaryText,
+        color: 'props.theme.colors.thirdText',
         align: 'start',
         padding: {top: 0, left: 0, right: 0, bottom: 24},
         font: {
@@ -99,8 +100,6 @@ export const getChartOptions = (props) => ({
       },
     },
 });
-
-
 
 export const data = {
     labels: ['To Do', 'In Progress', 'Done'],
@@ -149,6 +148,12 @@ function createGradient2(ctx, area) {
 }
 
 export const BarChart = (props) => {
+//   const theme = useTheme();
+
+    console.log(props.theme.colors.thirdText);
+
+
+
     const chartRef = useRef(null);
     
   const [chartData, setChartData] = useState({
@@ -158,24 +163,30 @@ export const BarChart = (props) => {
     useEffect(() => {
         const chart = chartRef.current;
 
-        if (!chart) {
-            return;
-        }
-          
-        const gradients = [{ backgroundColor: createGradient1(chart.ctx, chart.chartArea) },
-            { backgroundColor: createGradient2(chart.ctx, chart.chartArea) }];
-          
-        const updatedData = {
-            ...data, datasets: data.datasets.map((datasets, index) => {
-                const obj2 = gradients[index];
-                return { ...datasets, ...obj2}
-             })
-        };   
+        if (!chart) return;
 
-        console.log(updatedData)
-        
+        const gradients = [
+        { backgroundColor: createGradient1(chart.ctx, chart.chartArea) },
+        { backgroundColor: createGradient2(chart.ctx, chart.chartArea) }
+        ];
+
+        const updatedData = {
+        ...data,
+        datasets: data.datasets.map((datasets, index) => {
+            const obj2 = gradients[index];
+            return { ...datasets, ...obj2 }
+        })
+        };
+
         setChartData(updatedData);
-      }, []);
+        
+
+        // Оновлення опцій графіка
+        chart.options = getChartOptions(props);
+        console.log(' getChartOptions(props)')
+        chart.update();
+        console.log('chart.update')
+    }, [props.theme.colors]);
     
     
     

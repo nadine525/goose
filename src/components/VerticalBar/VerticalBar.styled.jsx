@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 
+
 export const Division = styled.div`
   /* border: 0.8px solid #e3f3ff; */
   border: 0.8px solid green;

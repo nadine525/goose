@@ -5,7 +5,7 @@ export const lightTheme = {
     thirdBackground: '#ffffff',
     primaryText: '#111111',
     secondText: '#343434',
-    thirdText: '#343434',
+    thirdText: '#9BD0F5', //////////////
     backgroundButton: '#e3f3ff',
     colorButtonContentHover: '#3e85f3',
     userLabelColor: '#111111',
@@ -43,7 +43,7 @@ export const darkTheme = {
     thirdBackground: '#13151A',
     primaryText: '#FFFFFF',
     secondText: '#FFFFFF',
-    thirdText: '#ffffff',
+    thirdText: '#36A2EB', //////////////////
     backgroundButton: '#3e85f3',
     colorButtonContentHover: '#ffffff',
     userLabelColor: 'rgba(250, 250, 250, 0.3)',

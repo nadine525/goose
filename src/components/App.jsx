@@ -1,19 +1,19 @@
-// import { Line } from "react-chartjs-2";
+import { useThemeContext } from '../hooks/useTheme';
 import Header from "../components/Header/Header";
-// import App1 from "./VerticalBar/Gradient";
 
 import BarChart from "./VerticalBar/VerticalBar";
 
 export const App = () => {
+  const { theme } = useThemeContext();
+  
   return (
     <>
 
       <Header />
-      <div>
-        <BarChart />
-        {/* <App1 /> */}
 
-      </div>
+        <BarChart theme={theme} />
+
+    
       
     
       {/* <p>Hello!</p> */}

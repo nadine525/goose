@@ -7,7 +7,7 @@ export const FeedbackBtn = styled.button`
   border-radius: 14px;
   border: none;
 
-  background-color: var(--green-valid);
+  background-color: #36a2eb;
 
   font-family: 'Inter';
   font-size: 12px;
