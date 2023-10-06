@@ -1,5 +1,7 @@
 import * as s from './AddFeedbackBtn.styled';
 
-export const AddFeedbackBtn = () => {
+const AddFeedbackBtn = () => {
   return <s.FeedbackBtn type="button">Feedback</s.FeedbackBtn>;
 };
+
+export default AddFeedbackBtn;

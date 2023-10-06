@@ -1,12 +1,19 @@
-import { BiMoon, BiSun } from 'react-icons/bi';
-import { iconSize } from 'components/constans';
-import { ThemeToggleBtn } from './ThemeToggle.styled';
+import { ReactComponent as MoonIcon } from '../../icons/moon.svg';
+import { ReactComponent as SunIcon } from '../../icons/sun.svg';
+import * as s from './ThemeToggle.styled';
+
+import { LIGHT } from 'components/constans';
+import { useThemeContext } from 'hooks';
 
 const ThemeToggle = () => {
-  <ThemeToggleBtn>
-    <BiSun size={iconSize.xxlg} />
-    <BiMoon size={iconSize.xxlg} />
-  </ThemeToggleBtn>;
+  const { theme, onChangeTheme } = useThemeContext();
+  const isThemeLight = theme === LIGHT;
+
+  return (
+    <s.ThemeToggleBtn type="button" onClick={onChangeTheme}>
+      {isThemeLight ? <MoonIcon /> : <SunIcon />}
+    </s.ThemeToggleBtn>
+  );
 };
 
 export default ThemeToggle;
